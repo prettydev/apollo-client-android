@@ -1,107 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nestedScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
-    android:paddingBottom="20dp"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
-    android:paddingTop="20dp"
-    tools:context=".activities.LoginActivity">
+    tools:context=".RegisterActivity">
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <ImageView
+        android:id="@+id/ivPhotoProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="@id/etPassword"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@id/etPassword"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/etNama"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="20dp"
+        android:hint="masukkan nama"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <android.support.v7.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp"
-            android:src="@drawable/logo" />
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="masukkan email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNama" />
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/textInputLayoutName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp">
+    <EditText
+        android:id="@+id/etUmur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="masukkan umur"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEmail" />
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/textInputEditTextName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/hint_name"
-                android:inputType="text"
-                android:maxLines="1"
-                android:textColor="@android:color/white" />
-        </android.support.design.widget.TextInputLayout>
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Buat Password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etUmur" />
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/textInputLayoutEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
+    <Button
+        android:id="@+id/btnUploadImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="upload\ngambar"
+        app:layout_constraintEnd_toEndOf="@id/ivPhotoProfile"
+        app:layout_constraintHorizontal_bias="0.413"
+        app:layout_constraintStart_toStartOf="@id/ivPhotoProfile"
+        app:layout_constraintTop_toBottomOf="@id/ivPhotoProfile" />
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/textInputEditTextEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/hint_email"
-                android:inputType="text"
-                android:maxLines="1"
-                android:textColor="@android:color/white" />
-        </android.support.design.widget.TextInputLayout>
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="168dp"
+        android:text="Register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/textInputLayoutPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/textInputEditTextPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/hint_password"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:textColor="@android:color/white" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/textInputLayoutConfirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/textInputEditTextConfirmPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/hint_confirm_password"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:textColor="@android:color/white" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/appCompatButtonRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:background="@color/colorTextHint"
-            android:text="@string/text_register" />
-
-        <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/appCompatTextViewLoginLink"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:gravity="center"
-            android:text="Already a member? Login"
-            android:textSize="16dp" />
-    </android.support.v7.widget.LinearLayoutCompat>
-</android.support.v4.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

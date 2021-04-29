@@ -1,4 +1,4 @@
-package com.androidtutorialshub.loginregisterkotlin
+package com.example.roomtrial
 
 import org.junit.Test
 
