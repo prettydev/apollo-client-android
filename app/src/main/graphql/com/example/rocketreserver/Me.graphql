@@ -1,0 +1,17 @@
+query Me() {
+  me {
+    id
+    lastLogin
+    username
+    firstName
+    lastName
+    email
+    isStaff
+    isActive
+    dateJoined
+    pk
+    archived
+    verified
+    secondaryEmail
+  }
+}

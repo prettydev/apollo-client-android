@@ -1,4 +1,4 @@
-package com.example.roomtrial
+package com.example.rocketreserver
 
 import android.content.Context
 import android.os.Looper
@@ -23,9 +23,12 @@ fun apolloClient(context: Context): ApolloClient {
         .addInterceptor(AuthorizationInterceptor(context))
         .build()
 
+//    val endpoint = "0524f019ca6f.ngrok.io/api/graphql/";
+    val endpoint = "10.0.2.2:8000/api/graphql/";
+
     instance = ApolloClient.builder()
-        .serverUrl("https://apollo-fullstack-tutorial.herokuapp.com/graphql")
-        .subscriptionTransportFactory(WebSocketSubscriptionTransport.Factory("wss://apollo-fullstack-tutorial.herokuapp.com/graphql", okHttpClient))
+        .serverUrl("http://"+endpoint)
+        .subscriptionTransportFactory(WebSocketSubscriptionTransport.Factory("ws://"+endpoint, okHttpClient))
         .okHttpClient(okHttpClient)
         .build()
 

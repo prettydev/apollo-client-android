@@ -1,4 +1,4 @@
-package com.example.roomtrial
+package com.example.rocketreserver
 
 import android.content.Context
 import android.content.SharedPreferences

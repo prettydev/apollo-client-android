@@ -1,4 +1,4 @@
-rootProject.name = "RoomTrial"
+rootProject.name="apollo-android-tutorial"
 include(":app")
 
 pluginManagement {

@@ -1,4 +1,4 @@
-package com.example.roomtrial
+package com.example.rocketreserver
 
 import org.junit.Test
 
